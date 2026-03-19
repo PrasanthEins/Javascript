@@ -1,0 +1,21 @@
+console.log("Welcome to the Palidrome program")
+
+function rev()
+{
+    const s = "Prasanth";
+    let word_rev = "";
+    for(let i=s.length-1;i>=0;i--)
+    {
+        word_rev = word_rev + s[i]
+    }
+    if (word_rev == s)
+    {
+        console.log(`${s} is a palindrome`)
+    }
+    else
+    {
+        console.log(`${s} is not a palindrome`)
+    }
+}
+
+rev();
