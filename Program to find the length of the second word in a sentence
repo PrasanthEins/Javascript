@@ -1,0 +1,9 @@
+console.log("Program to find the length of the second word in a sentence");
+function wor()
+{
+    let s = "Prasanth Kumar"
+    let a = s.split(" ")
+    console.log(a[1].length)
+    
+}
+wor()
