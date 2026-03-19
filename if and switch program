@@ -1,0 +1,40 @@
+console.log("Usage of if and switch condition program");
+function launchBrowser()
+{
+    let browserName = "Chrome"
+    
+    
+    if (browserName == "Chrome")
+    {
+        console.log("Opening Chrome Webbrowser")
+        
+    }
+    if (brow == "firefox")
+    {
+        console.log("Opening Firefox Webbrowser")
+    }
+    runTests();
+    
+ 
+}
+
+function runTests()
+{
+    let testType = "smoke"
+    
+    switch(testType)
+    {
+        case "smoke":
+            console.log("Smoke Test performed")
+            break;
+        case "sanity":
+            console.log("Sanity Test Performed")
+            break;
+        default:
+            console.log("Regression Test Performed")
+            break;
+            
+    }
+}
+
+launchBrowser()
