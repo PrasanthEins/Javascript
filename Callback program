@@ -1,8 +1,8 @@
 console.log("Callback Program")
 
-let browser = "Chrome"   #Declared a variable browser that contains Chrome as value
+let browser = "Chrome"                                        #Declared a variable browser that contains Chrome as value
 
-function checkBrowserVersion(callback)  #now passing callback as an argument to the function checkBrowserVersion
+function checkBrowserVersion(callback)                        #now passing callback as an argument to the function checkBrowserVersion
 {
     setTimeout(() => {                                        #adding a timeout with the usage of setTimeout(())
         callback(browser);                                    #here iam passing the browser variable value to the callback
