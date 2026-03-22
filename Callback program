@@ -1,0 +1,18 @@
+console.log("Callbacks")
+
+let browser = "Chrome"
+
+function checkBrowserVersion(callback)
+{
+    setTimeout(() => {
+        callback(browser);
+    }, 2000);
+    
+}
+
+function browserlog(browserversion)
+{
+    console.log("THe Browser Version is: ",browserversion)
+}
+
+checkBrowserVersion(browserlog)
