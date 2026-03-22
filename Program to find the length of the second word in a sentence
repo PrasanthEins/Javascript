@@ -1,9 +1,9 @@
 console.log("Program to find the length of the second word in a sentence");
-function wor()
+function length_of_second_word()
 {
     let s = "Prasanth Kumar"
-    let a = s.split(" ")
+    let a = s.split(" ") #this splits the words in an list/array ['Prasanth', 'Kumar']
     console.log(a[1].length)
     
 }
-wor()
+length_of_second_word()
