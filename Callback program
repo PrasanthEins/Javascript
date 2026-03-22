@@ -5,7 +5,7 @@ let browser = "Chrome"                                        #Declared a variab
 function checkBrowserVersion(callback)                        #now passing callback as an argument to the function checkBrowserVersion
 {
     setTimeout(() => {                                        #adding a timeout with the usage of setTimeout(())
-        callback(browser);                                    #here iam passing the browser variable value to the callback
+        callback(browser);                                    #here iam passing the browser global variable value to the callback
     }, 2000);                                                 # 2000 equivalent to 2 seconds
     
 }
