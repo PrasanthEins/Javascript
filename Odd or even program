@@ -1,0 +1,16 @@
+console.log("Odd or Even Programm")
+
+function verify()
+{
+    let number = prompt("Enter a number: ");
+    if (number%10 == 0)
+    {
+        
+        console.log("Even Number");
+    }
+    else
+    {
+        console.log("Odd Number");
+    }
+}
+verify()
