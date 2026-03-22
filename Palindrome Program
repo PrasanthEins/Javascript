@@ -1,6 +1,6 @@
 console.log("Welcome to the Palidrome program")
 
-function rev()
+function check_palindrome()
 {
     const s = "Prasanth";
     let word_rev = "";
@@ -18,4 +18,4 @@ function rev()
     }
 }
 
-rev();
+check_palindrome();
