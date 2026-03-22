@@ -1,18 +1,25 @@
-console.log("Callbacks")
+console.log("Callback Program")
 
-let browser = "Chrome"
+let browser = "Chrome"   #Declared a variable browser that contains Chrome as value
 
-function checkBrowserVersion(callback)
+function checkBrowserVersion(callback)  #now passing callback as an argument to the function checkBrowserVersion
 {
-    setTimeout(() => {
-        callback(browser);
-    }, 2000);
+    setTimeout(() => {                                        #adding a timeout with the usage of setTimeout(())
+        callback(browser);                                    #here iam passing the browser variable value to the callback
+    }, 2000);                                                 # 2000 equivalent to 2 seconds
     
 }
 
-function browserlog(browserversion)
+function browseroutput(browserversion)                        # now declaring the second function browserlog
 {
-    console.log("THe Browser Version is: ",browserversion)
+    console.log("THe Browser Version is: ",browserversion)    #printing the browser version
 }
 
-checkBrowserVersion(browserlog)
+checkBrowserVersion(browseroutput)                             #what happens here is callback = browseroutput means iam passing the function as an argument
+                                                               to another function achieving the callback functionality
+
+                                                               #now internally callback = browseroutput
+                                                               #callback(browser) becomes browserlog("Chrome")
+
+
+
