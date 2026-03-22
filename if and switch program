@@ -9,7 +9,7 @@ function launchBrowser()
         console.log("Opening Chrome Webbrowser")
         
     }
-    if (brow == "firefox")
+    if (browserName == "firefox")
     {
         console.log("Opening Firefox Webbrowser")
     }
