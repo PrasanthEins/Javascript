@@ -1,6 +1,6 @@
 console.log("Odd or Even Programm")
 
-function verify()
+function oddeven()
 {
     let number = prompt("Enter a number: ");
     if (number%10 == 0)
@@ -13,4 +13,4 @@ function verify()
         console.log("Odd Number");
     }
 }
-verify()
+oddeven()
