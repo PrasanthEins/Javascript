@@ -19,7 +19,7 @@ checkBrowserVersion(browseroutput)                             #what happens her
                                                                to another function achieving the callback functionality
 
                                                                #now internally callback = browseroutput
-                                                               #callback(browser) becomes browserlog("Chrome")
+                                                               #callback(browser) becomes browseroutput("Chrome")
 
 
 
