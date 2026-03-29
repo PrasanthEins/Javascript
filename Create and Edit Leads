@@ -1,0 +1,60 @@
+import {test, Page} from "@playwright/test"
+
+
+async function writetext(page:Page, locator_xpath:string, text:string)
+{
+    await page.locator(locator_xpath).fill(text);
+}
+
+async function LoginPageLink(page:Page)
+{
+    await page.goto("http://leaftaps.com/opentaps/control/main")
+}
+
+async function Credentials(page:Page, username:string, password:string)
+{
+    await page.locator("#username").fill(username);
+    await page.locator("#password").fill(password);
+    await page.locator("input.decorativeSubmit").click();
+    
+}
+
+async function NavigateToCreateLead(page:Page)
+{
+    await page.locator("//a[contains(text(),'CRM/SFA')]").click();
+    await page.locator("//a[contains(text(), 'Leads')]").click();
+    await page.locator("//a[contains(text(), 'Create Lead')]").click();
+}
+
+async function fillingleads(page:Page)
+{
+        await writetext(page, "//input[@name='companyName']", "Prasanth")
+        await writetext(page, "//input[@id='createLeadForm_firstName']", "Prasanth")
+        await writetext(page, "//input[@id ='createLeadForm_lastName']", "Kumar")
+        await writetext(page, "//input[@id ='createLeadForm_personalTitle']", "Hello")
+        await writetext(page, "//input[@id ='createLeadForm_generalProfTitle']", "TestForm")
+        await page.locator("//input[@value ='Create Lead']").click()
+        
+}
+
+async function editDetails(page:Page)
+{
+        await page.locator("//a[contains(text(), 'Edit')]").click()
+        await page.locator("//input[@id = 'updateLeadForm_companyName']").clear();
+        await page.locator("//input[@id = 'updateLeadForm_companyName']").fill('Testleaf')
+        await page.locator("//input[@value = 'Update']").click();
+        
+}
+
+test('Create Leads',async ({page})=>{
+
+        await LoginPageLink(page);
+        await Credentials(page,"Demosalesmanager", "crmsfa")
+        await NavigateToCreateLead(page)
+        await fillingleads(page)
+        await editDetails(page);
+        await page.waitForTimeout(3000);
+      
+
+
+})
